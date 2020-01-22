@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "urn:tokenInfoAndToken#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "tokenInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accountId": {
+          "type": "string",
+          "pattern": "[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
+        },
+        "userId": {
+          "type": "string",
+          "pattern": "[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
+        },
+        "billingId": {
+          "type": "string",
+          "pattern": "[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}"
+        }
+      },
+      "required": [
+        "accountId",
+        "userId",
+        "billingId"
+      ]
+    },
+    "token": {
+      "type": "string",
+      "pattern": "[a-zA-Z0-9.]*"
+    }
+  },
+  "required": [
+    "tokenInfo",
+    "token"
+  ]
+}

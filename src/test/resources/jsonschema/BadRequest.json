@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "urn:badRequest#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "message": {
+      "type": "string",
+      "pattern": "Bad request"
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "errors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "location": {
+                "type": "string",
+                "enum": [
+                  "body",
+                  "params",
+                  "query"
+                ]
+              },
+              "param": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "array",
+                  "object",
+                  "integer",
+                  "number",
+                  "boolean",
+                  "null"
+                ]
+              },
+              "msg": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "location",
+              "param",
+              "msg"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "message"
+  ]
+}

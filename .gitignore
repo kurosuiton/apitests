@@ -1,0 +1,5 @@
+/.idea/
+/.allure/allure-2.7.0/
+/allure-results/
+/target/
+/apitests.iml

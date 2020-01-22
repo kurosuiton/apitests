@@ -1,0 +1,10 @@
+<suite name = "Restassured">
+    <test name = "Sample Test">
+        <classes>
+            <class name = "com.apitests.test.PostTests" />
+            <class name = "com.apitests.test.PutTests" />
+            <class name = "com.apitests.test.GetTests" />
+            <class name = "com.apitests.test.DeleteTests" />
+        </classes>
+    </test>
+</suite>
