@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <testng.version>7.0.0</testng.version>
+        <testng.version>7.7.0</testng.version>
         <rest-assured.version>4.1.2</rest-assured.version>
         <json-path.version>4.1.2</json-path.version>
         <json-schema-validator.version>4.1.2</json-schema-validator.version>
